@@ -1,12 +1,30 @@
 public class Account {
-    double balance;
+    private double balance;
+    private String name;
 
-    Account() {
+    public Account() {
         this.balance = 0;
     }
 
-    Account(double balance) {
+    public Account(double balance) {
         this.balance =  balance;
     }
-    
+
+    public double withdraw(double amount) {
+        this.balance -= amount;
+        return amount;
+    }
+
+    public double deposit(double amount) {
+        this.balance += amount;
+        return amount;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
