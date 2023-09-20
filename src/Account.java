@@ -9,6 +9,11 @@ public class Account {
     public Account(double balance) {
         this.balance =  balance;
     }
+    
+    public Account(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 
     public double withdraw(double amount) {
         this.balance -= amount;
@@ -26,5 +31,9 @@ public class Account {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String toString() {
+        return "Bank account: " + this.name + " Balance: " + this.balance;
     }
 }
